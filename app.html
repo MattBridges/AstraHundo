@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>App Name: A Coding Challange</title>
+  <title>Perator: A Coding Challange</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -30,7 +30,7 @@
       <div class="container">
         <a class="navbar-brand" href="/index.html">
           <img src="/img/Base Logo Vector Files Blue Red.svg" height="50" alt="">
-          App Name
+          Perator
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,12 +65,41 @@
     </nav>
 
   </header>
-  <main class="content container">
-
-    <h1>APP UI GOES HERE</h1>
-    <input type="text" id="message" placeholder="Enter a Message.....">
-    <button class="btn btn-primary" id="btnSubmit" type="button">Display a Message</button>
-
+  <main class="content container px-4 py-5 mt-5">
+    <div class="row h-100 row-cols-1 row-cols-md-2 gy-2">
+      <div class="col border-2 border-end">
+        <h1 class="fw-bold mb-3">Perator: A Coding Challange</h1>
+        <h4 class="lead">A Javascript coding exercise using loops.Write a program that displays the numbers from 0 to
+          100, then display the even numbers in <strong>BOLD</strong>.</h4>
+        <h2 class="mt-5 border-2 border-bottom">Instructions</h2>
+        <p>Enter a starting value and an ending value. Press the button and the values will appear.</p>
+      </div>
+      <div class="col">
+        <form action="#" class="row gy-3 gx-3">
+            <div class="col">
+              <input type="number" class="form-control" id="startValue" placeholder="Starting Value" aria-label="Starting Value" value="0">
+            </div>
+            <div class="col">
+              <input type="number" class="form-control" id="endValue" placeholder="Ending Value" aria-label="Ending Value" value="100">          
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+              <button class="btn btn-dark btn-lg" id="btnSubmit" type="button">Display The Perator</button>
+            </div>         
+        </form>
+        <h2 class="mt-5 border-bottom border-2">Results</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <tbody id="results">
+                <!-- 
+                  The Results Go Here
+                    <tr><td>1</td></tr>...
+                -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+     
+    </div>
 
   </main>
   <footer class="container-fluid py-3">
@@ -98,13 +127,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-    <!-- SweetAlert CDN -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- SweetAlert CDN -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!--My script-->
   <script src="/js/site.js"></script>
 
   <script>
-    document.getElementById('btnSubmit').addEventListener('click', DisplayMessage);
+    document.getElementById('btnSubmit').addEventListener('click', GetValues);
   </script>
 </body>
 
